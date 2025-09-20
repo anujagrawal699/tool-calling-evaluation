@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "user_prompt": "Error rate for payments in prod spiked over the last 15 minutes. Mitigate the issue appropriately, verify improvement with metrics, update the ticket, and log the action to the incident timeline.",
+    "initial_state": {
+      "deployments": [
+        {"service": "payments", "namespace": "prod", "replicas": 3}
+      ],
+      "feature_flags": {},
+      "ticket": {"status": "open", "note": ""}
+    },
+    "acceptance_criteria": {
+      "deployment": {"service": "payments", "namespace": "prod", "replicas_gte": 6},
+      "incident_log_contains": "Scaled payments",
+      "ticket_status": "mitigated"
+    }
+  },
+  {
+    "id": 2,
+    "user_prompt": "Latency p95 for checkout in prod regressed in last 10 minutes. Investigate, attempt a mitigation, verify improvement, and document actions.",
+    "initial_state": {
+      "deployments": [
+        {"service": "checkout", "namespace": "prod", "replicas": 2}
+      ],
+      "feature_flags": {"checkout_new_flow": true},
+      "ticket": {"status": "open", "note": ""}
+    },
+    "acceptance_criteria": {
+      "deployment": {"service": "checkout", "namespace": "prod", "replicas_gte": 3},
+      "incident_log_contains": "Mitigation for checkout latency",
+      "ticket_status": "mitigated"
+    }
+  },
+  {
+    "id": 3,
+    "user_prompt": "Error rate for search in staging increased. Do not change prod. Verify with metrics and summarize in ticket.",
+    "initial_state": {
+      "deployments": [
+        {"service": "search", "namespace": "staging", "replicas": 1},
+        {"service": "search", "namespace": "prod", "replicas": 5}
+      ],
+      "feature_flags": {},
+      "ticket": {"status": "open", "note": ""}
+    },
+    "acceptance_criteria": {
+      "deployment": {"service": "search", "namespace": "staging", "replicas_gte": 2},
+      "incident_log_contains": "staging",
+      "ticket_status": "mitigated"
+    }
+  }
+]

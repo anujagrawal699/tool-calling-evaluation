@@ -1,0 +1,23 @@
+{
+  "1": [
+    {"name": "metrics_query", "arguments": {"service": "payments", "metric": "error_rate", "minutes": 15, "namespace": "prod"}},
+    {"name": "k8s_scale", "arguments": {"service": "payments", "replicas": 6, "namespace": "prod"}},
+    {"name": "metrics_query", "arguments": {"service": "payments", "metric": "error_rate", "minutes": 10, "namespace": "prod"}},
+    {"name": "incident_log", "arguments": {"message": "Scaled payments to 6 replicas to mitigate elevated error rate", "severity": "warning"}},
+    {"name": "ticket_update", "arguments": {"status": "mitigated", "note": "Scaled payments to 6 replicas; error rate improving"}}
+  ],
+  "2": [
+    {"name": "metrics_query", "arguments": {"service": "checkout", "metric": "latency_p95", "minutes": 10, "namespace": "prod"}},
+    {"name": "k8s_scale", "arguments": {"service": "checkout", "replicas": 3, "namespace": "prod"}},
+    {"name": "metrics_query", "arguments": {"service": "checkout", "metric": "latency_p95", "minutes": 5, "namespace": "prod"}},
+    {"name": "incident_log", "arguments": {"message": "Mitigation for checkout latency - scaled to 3 replicas", "severity": "warning"}},
+    {"name": "ticket_update", "arguments": {"status": "mitigated", "note": "Scaled checkout to 3 replicas to address latency regression"}}
+  ],
+  "3": [
+    {"name": "metrics_query", "arguments": {"service": "search", "metric": "error_rate", "minutes": 15, "namespace": "staging"}},
+    {"name": "k8s_scale", "arguments": {"service": "search", "replicas": 2, "namespace": "staging"}},
+    {"name": "metrics_query", "arguments": {"service": "search", "metric": "error_rate", "minutes": 10, "namespace": "staging"}},
+    {"name": "incident_log", "arguments": {"message": "Scaled search service in staging to address increased error rate", "severity": "info"}},
+    {"name": "ticket_update", "arguments": {"status": "mitigated", "note": "Addressed staging search error rate by scaling to 2 replicas"}}
+  ]
+}
