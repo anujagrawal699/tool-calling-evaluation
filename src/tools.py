@@ -54,7 +54,7 @@ def metrics_query(env: EnvState, service: str, metric: str, minutes: int, namesp
     recommendation = ""
     
     if metric == "error_rate":
-        base = max(0.005, 0.06 - 0.006 * dep.replicas)  # 6% down to ~<1%
+        base = max(0.005, 0.06 - 0.006 * dep.replicas)
         noise = rnd.uniform(-0.003, 0.003)
         value = max(0.0, base + noise)
         

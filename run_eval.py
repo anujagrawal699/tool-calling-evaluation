@@ -116,9 +116,9 @@ def main():
         avg_score = sum(r.get("weighted_score", {}).get("total_score", 0) for r in runs) / max(total, 1)
         
         md_lines.append(f"## {variant}")
-        md_lines.append(f"**Full Pass Rate**: {passed}/{total} ({100*passed//max(total,1)}%)")
+        md_lines.append(f"**Full Pass Rate (Technical + Administrative)**: {passed}/{total} ({100*passed//max(total,1)}%)")
         md_lines.append(f"**Technical Success Rate**: {technical_passed}/{total} ({100*technical_passed//max(total,1)}%)")
-        md_lines.append(f"**Average Score**: {avg_score:.1f}/100.0")
+        md_lines.append(f"**Average Score**: {avg_score:.1f}% / 100%")
         md_lines.append("")
         
         if total:
@@ -128,11 +128,6 @@ def main():
                 "incident_logged": sum(1 for r in runs if r.get("partial", {}).get("incident_logged")),
                 "ticket_updated": sum(1 for r in runs if r.get("partial", {}).get("ticket_updated")),
             }
-            md_lines.append("### Component Performance:")
-            md_lines.append(f"- tool_syntax_ok: {pc['tool_syntax_ok']}/{total} ({100*pc['tool_syntax_ok']//total}%)")
-            md_lines.append(f"- verification_performed: {pc['verification_performed']}/{total} ({100*pc['verification_performed']//total}%)")
-            md_lines.append(f"- incident_logged: {pc['incident_logged']}/{total} ({100*pc['incident_logged']//total}%)")
-            md_lines.append(f"- ticket_updated: {pc['ticket_updated']}/{total} ({100*pc['ticket_updated']//total}%)")
             
             # Detailed scoring breakdown - average across all scenarios
             if runs:

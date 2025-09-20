@@ -1,0 +1,122 @@
+2025-09-20 13:40:15,711 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 13:40:20,496 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 13:40:23,386 INFO harness: tool_call step=3 name=incident_log ok=True err=None
+2025-09-20 13:40:28,401 INFO harness: tool_call step=4 name=metrics_query ok=True err=None
+2025-09-20 13:40:31,474 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 13:40:35,208 INFO harness: tool_call step=6 name=k8s_scale ok=True err=None
+2025-09-20 13:40:38,138 INFO harness: tool_call step=7 name=ticket_update ok=True err=None
+2025-09-20 13:40:42,529 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 13:40:42,531 INFO eval: [baseline] scenario=1 valid=False technical=True score=100.0% reasons=['ticket status investigating != mitigated']
+2025-09-20 13:42:24,170 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 13:42:27,735 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 13:42:30,583 INFO harness: tool_call step=3 name=incident_log ok=True err=None
+2025-09-20 13:42:33,901 INFO harness: tool_call step=4 name=metrics_query ok=True err=None
+2025-09-20 13:42:36,583 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 13:42:40,441 INFO harness: tool_call step=6 name=k8s_scale ok=True err=None
+2025-09-20 13:42:44,163 INFO harness: tool_call step=7 name=ticket_update ok=True err=None
+2025-09-20 13:42:47,736 INFO eval: [baseline] scenario=1 valid=False technical=True score=100.0% reasons=['ticket status investigating != mitigated']
+2025-09-20 13:42:51,423 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 13:42:53,835 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 13:42:56,533 INFO harness: tool_call step=3 name=metrics_query ok=True err=None
+2025-09-20 13:43:00,118 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 13:43:02,687 INFO harness: tool_call step=5 name=k8s_scale ok=True err=None
+2025-09-20 13:43:06,324 INFO harness: tool_call step=6 name=incident_log ok=True err=None
+2025-09-20 13:43:09,156 INFO harness: tool_call step=7 name=ticket_update ok=True err=None
+2025-09-20 13:43:12,151 INFO eval: [improved] scenario=1 valid=True technical=True score=100.0% reasons=[]
+2025-09-20 13:43:58,179 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 13:44:01,062 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 13:44:04,401 INFO harness: tool_call step=3 name=incident_log ok=True err=None
+2025-09-20 13:44:08,207 INFO harness: tool_call step=4 name=metrics_query ok=True err=None
+2025-09-20 13:44:11,118 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 13:44:14,162 INFO harness: tool_call step=6 name=incident_log ok=True err=None
+2025-09-20 13:44:17,896 INFO harness: tool_call step=7 name=ticket_update ok=True err=None
+2025-09-20 13:44:21,827 INFO eval: [baseline] scenario=1 valid=False technical=False score=40.0% reasons=['replicas 5 < 6', 'ticket status investigating != mitigated']
+2025-09-20 13:44:25,049 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 13:44:27,826 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 13:44:31,157 INFO harness: tool_call step=3 name=incident_log ok=True err=None
+2025-09-20 13:44:34,986 INFO harness: tool_call step=4 name=metrics_query ok=True err=None
+2025-09-20 13:44:38,316 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 13:44:41,457 INFO harness: tool_call step=6 name=ticket_update ok=True err=None
+2025-09-20 13:44:44,425 INFO eval: [baseline] scenario=2 valid=False technical=False score=40.0% reasons=['incident log missing required message']
+2025-09-20 13:44:47,656 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 13:44:50,392 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 13:44:53,700 INFO harness: tool_call step=3 name=metrics_query ok=True err=None
+2025-09-20 13:44:57,283 INFO eval: [baseline] scenario=3 valid=False technical=False score=5.0% reasons=['replicas 1 < 2', 'incident log missing required message', 'ticket status open != mitigated']
+2025-09-20 13:44:59,795 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 13:45:02,658 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 13:45:05,563 INFO harness: tool_call step=3 name=metrics_query ok=True err=None
+2025-09-20 13:45:09,102 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 13:45:12,482 INFO harness: tool_call step=5 name=k8s_scale ok=True err=None
+2025-09-20 13:45:16,325 INFO harness: tool_call step=6 name=incident_log ok=True err=None
+2025-09-20 13:45:19,403 INFO harness: tool_call step=7 name=ticket_update ok=True err=None
+2025-09-20 13:45:22,270 INFO eval: [improved] scenario=1 valid=True technical=True score=100.0% reasons=[]
+2025-09-20 13:45:25,350 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 13:45:28,516 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 13:45:32,122 INFO harness: tool_call step=3 name=metrics_query ok=True err=None
+2025-09-20 13:45:35,256 INFO harness: tool_call step=4 name=incident_log ok=True err=None
+2025-09-20 13:45:39,123 INFO harness: tool_call step=5 name=ticket_update ok=True err=None
+2025-09-20 13:45:41,679 INFO eval: [improved] scenario=2 valid=False technical=False score=40.0% reasons=['incident log missing required message']
+2025-09-20 13:45:45,735 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 13:45:49,400 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 13:45:53,394 INFO harness: tool_call step=3 name=metrics_query ok=True err=None
+2025-09-20 13:45:56,642 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 13:46:00,186 INFO harness: tool_call step=5 name=k8s_scale ok=True err=None
+2025-09-20 13:46:03,561 INFO harness: tool_call step=6 name=incident_log ok=True err=None
+2025-09-20 13:46:06,876 INFO harness: tool_call step=7 name=ticket_update ok=True err=None
+2025-09-20 13:46:10,224 INFO eval: [improved] scenario=3 valid=True technical=True score=100.0% reasons=[]
+2025-09-20 14:54:20,612 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 14:54:24,119 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 14:54:27,236 INFO harness: tool_call step=3 name=incident_log ok=True err=None
+2025-09-20 14:54:30,634 INFO harness: tool_call step=4 name=metrics_query ok=True err=None
+2025-09-20 14:54:33,722 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 14:54:36,657 INFO harness: tool_call step=6 name=ticket_update ok=True err=None
+2025-09-20 14:54:40,752 INFO eval: [baseline] scenario=1 valid=False technical=False score=40.0% reasons=['replicas 5 < 6', 'ticket status investigating != mitigated']
+2025-09-20 15:01:58,248 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 15:02:03,881 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 15:02:09,841 INFO harness: tool_call step=3 name=incident_log ok=True err=None
+2025-09-20 15:02:13,149 INFO harness: tool_call step=4 name=metrics_query ok=True err=None
+2025-09-20 15:02:18,867 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 15:02:23,378 INFO harness: tool_call step=6 name=k8s_scale ok=True err=None
+2025-09-20 15:02:27,417 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 15:02:30,942 INFO harness: tool_call step=8 name=k8s_scale ok=True err=None
+2025-09-20 15:02:30,944 INFO eval: [baseline] scenario=1 valid=False technical=True score=85.0% reasons=['ticket status open != mitigated']
+2025-09-20 15:04:49,368 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 15:04:53,991 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 15:04:59,425 INFO harness: tool_call step=3 name=incident_log ok=True err=None
+2025-09-20 15:05:04,140 INFO harness: tool_call step=4 name=metrics_query ok=True err=None
+2025-09-20 15:05:09,111 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 15:05:13,090 INFO harness: tool_call step=6 name=k8s_scale ok=True err=None
+2025-09-20 15:05:18,831 INFO harness: tool_call step=7 name=ticket_update ok=True err=None
+2025-09-20 15:05:22,520 INFO eval: [baseline] scenario=1 valid=False technical=True score=100.0% reasons=['ticket status investigating != mitigated']
+2025-09-20 15:05:28,775 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 15:05:31,717 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 15:05:35,128 INFO harness: tool_call step=3 name=incident_log ok=True err=None
+2025-09-20 15:05:38,497 INFO harness: tool_call step=4 name=metrics_query ok=True err=None
+2025-09-20 15:05:42,269 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 15:05:45,293 INFO eval: [baseline] scenario=2 valid=False technical=False score=25.0% reasons=['incident log missing required message', 'ticket status open != mitigated']
+2025-09-20 15:05:51,647 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 15:05:57,692 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 15:06:01,128 INFO harness: tool_call step=3 name=metrics_query ok=True err=None
+2025-09-20 15:06:07,567 INFO eval: [baseline] scenario=3 valid=False technical=False score=5.0% reasons=['replicas 1 < 2', 'incident log missing required message', 'ticket status open != mitigated']
+2025-09-20 15:06:10,926 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 15:06:16,030 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 15:06:19,391 INFO harness: tool_call step=3 name=metrics_query ok=True err=None
+2025-09-20 15:06:25,509 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 15:06:29,411 INFO harness: tool_call step=5 name=k8s_scale ok=True err=None
+2025-09-20 15:06:33,178 INFO harness: tool_call step=6 name=incident_log ok=True err=None
+2025-09-20 15:06:39,038 INFO harness: tool_call step=7 name=ticket_update ok=True err=None
+2025-09-20 15:06:42,271 INFO eval: [improved] scenario=1 valid=True technical=True score=100.0% reasons=[]
+2025-09-20 15:06:45,683 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 15:06:52,868 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 15:06:59,424 INFO harness: tool_call step=3 name=metrics_query ok=True err=None
+2025-09-20 15:07:05,280 INFO harness: tool_call step=4 name=incident_log ok=True err=None
+2025-09-20 15:07:08,719 INFO harness: tool_call step=5 name=ticket_update ok=True err=None
+2025-09-20 15:07:11,327 INFO eval: [improved] scenario=2 valid=False technical=False score=40.0% reasons=['incident log missing required message']
+2025-09-20 15:07:15,234 INFO harness: tool_call step=1 name=metrics_query ok=True err=None
+2025-09-20 15:07:19,424 INFO harness: tool_call step=2 name=k8s_scale ok=True err=None
+2025-09-20 15:07:31,169 INFO harness: tool_call step=3 name=metrics_query ok=True err=None
+2025-09-20 15:07:34,214 WARNING harness: Missing tool_call and final_answer; prompting model to follow schema
+2025-09-20 15:07:38,445 INFO harness: tool_call step=5 name=k8s_scale ok=True err=None
+2025-09-20 15:07:41,827 INFO harness: tool_call step=6 name=incident_log ok=True err=None
+2025-09-20 15:07:46,772 INFO harness: tool_call step=7 name=ticket_update ok=True err=None
+2025-09-20 15:07:49,483 INFO eval: [improved] scenario=3 valid=True technical=True score=100.0% reasons=[]
